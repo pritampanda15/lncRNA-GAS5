@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gxl SYSTEM "http://gin.univ-mrs.fr/GINsim/GINML_2_1.dtd">
+<gxl>
+  <graph id="defaultID" class="regulatory" nodeorder="DNA_damage ATM p38MAPK GAS5 Mdm2 p53 p53_A p53_K p53INP1 miR_34c E2F1 p21 RB1 Wip1 HDAC1 Myc Sirt1 Cdc25 CdkCyclinD CdkCyclinE Bcl2 BAX Caspase PROLIFERATION CYCLE_ARREST APOPTOSIS">
+    <node id="DNA_damage" maxvalue="1">
+      <parameter val="1" idActiveInteractions="DNA_damage:DNA_damage:1"/>
+      <annotation>
+        <comment>DNA_damage is an input node marked with an auto-regulation.</comment>
+      </annotation>
+    </node>
+    <node id="ATM" maxvalue="1">
+      <parameter val="1" idActiveInteractions="DNA_damage:ATM:1"/>
+      <parameter val="1" idActiveInteractions="DNA_damage:ATM:1 HDAC1:ATM:1"/>
+      <parameter val="1" idActiveInteractions="DNA_damage:ATM:1 Wip1:ATM:1"/>
+    </node>
+    <node id="p38MAPK" maxvalue="1">
+      <parameter val="1" idActiveInteractions="ATM:p38MAPK:1"/>
+    </node>
+    <node id="GAS5" maxvalue="1">
+      <parameter val="1" idActiveInteractions="DNA_damage:GAS5:1"/>
+    </node>
+    <node id="Mdm2" maxvalue="1">
+      <parameter val="1"/>
+      <parameter val="1" idActiveInteractions="p53:Mdm2:1"/>
+      <parameter val="1" idActiveInteractions="p53:Mdm2:1 Wip1:Mdm2:1"/>
+    </node>
+    <node id="p53" maxvalue="1">
+      <parameter val="1" idActiveInteractions="p38MAPK:p53:1 GAS5:p53:1"/>
+      <parameter val="1" idActiveInteractions="ATM:p53:1 p38MAPK:p53:1"/>
+      <parameter val="1" idActiveInteractions="ATM:p53:1 p38MAPK:p53:1 GAS5:p53:1"/>
+    </node>
+    <node id="p53_A" maxvalue="1">
+      <parameter val="1"/>
+      <parameter val="1" idActiveInteractions="p53:p53_A:1"/>
+      <parameter val="1" idActiveInteractions="p53:p53_A:1 p53INP1:p53_A:1"/>
+    </node>
+    <node id="p53_K" maxvalue="1">
+      <parameter val="1" idActiveInteractions="p53:p53_K:1"/>
+      <parameter val="1" idActiveInteractions="p53:p53_K:1 Sirt1:p53_K:1"/>
+      <parameter val="1" idActiveInteractions="p53:p53_K:1 Wip1:p53_K:1"/>
+    </node>
+    <node id="p53INP1" maxvalue="1">
+      <parameter val="1" idActiveInteractions="p53_K:p53INP1:1"/>
+      <parameter val="1" idActiveInteractions="p53_A:p53INP1:1"/>
+      <parameter val="1" idActiveInteractions="p53_A:p53INP1:1 p53_K:p53INP1:1"/>
+    </node>
+    <node id="miR_34c" maxvalue="1">
+      <parameter val="1" idActiveInteractions="p38MAPK:miR_34c:1"/>
+      <parameter val="1" idActiveInteractions="ATM:miR_34c:1"/>
+      <parameter val="1" idActiveInteractions="ATM:miR_34c:1 p38MAPK:miR_34c:1"/>
+    </node>
+    <node id="E2F1" maxvalue="1">
+      <parameter val="1"/>
+      <parameter val="1" idActiveInteractions="Cdc25:E2F1:1"/>
+      <parameter val="1" idActiveInteractions="RB1:E2F1:1"/>
+      <parameter val="1" idActiveInteractions="RB1:E2F1:1 Cdc25:E2F1:1"/>
+      <parameter val="1" idActiveInteractions="GAS5:E2F1:1 Cdc25:E2F1:1"/>
+    </node>
+    <node id="p21" maxvalue="1">
+      <parameter val="1" idActiveInteractions="p53_A:p21:1"/>
+      <parameter val="1" idActiveInteractions="p53_A:p21:1 Caspase:p21:1"/>
+      <parameter val="1" idActiveInteractions="p53_A:p21:1 Myc:p21:1"/>
+      <parameter val="1" idActiveInteractions="p53_A:p21:1 Myc:p21:1 Caspase:p21:1"/>
+      <parameter val="1" idActiveInteractions="p53_A:p21:1 HDAC1:p21:1"/>
+      <parameter val="1" idActiveInteractions="p53_A:p21:1 HDAC1:p21:1 Caspase:p21:1"/>
+      <parameter val="1" idActiveInteractions="p53_A:p21:1 HDAC1:p21:1 Myc:p21:1"/>
+      <parameter val="1" idActiveInteractions="p53_A:p21:1 HDAC1:p21:1 Myc:p21:1 Caspase:p21:1"/>
+      <parameter val="1" idActiveInteractions="p38MAPK:p21:1"/>
+      <parameter val="1" idActiveInteractions="p38MAPK:p21:1 Myc:p21:1"/>
+      <parameter val="1" idActiveInteractions="p38MAPK:p21:1 HDAC1:p21:1"/>
+      <parameter val="1" idActiveInteractions="p38MAPK:p21:1 p53_A:p21:1"/>
+      <parameter val="1" idActiveInteractions="p38MAPK:p21:1 p53_A:p21:1 Caspase:p21:1"/>
+      <parameter val="1" idActiveInteractions="p38MAPK:p21:1 p53_A:p21:1 Myc:p21:1"/>
+      <parameter val="1" idActiveInteractions="p38MAPK:p21:1 p53_A:p21:1 Myc:p21:1 Caspase:p21:1"/>
+      <parameter val="1" idActiveInteractions="p38MAPK:p21:1 p53_A:p21:1 HDAC1:p21:1"/>
+      <parameter val="1" idActiveInteractions="p38MAPK:p21:1 p53_A:p21:1 HDAC1:p21:1 Caspase:p21:1"/>
+      <parameter val="1" idActiveInteractions="p38MAPK:p21:1 p53_A:p21:1 HDAC1:p21:1 Myc:p21:1"/>
+      <parameter val="1" idActiveInteractions="p38MAPK:p21:1 p53_A:p21:1 HDAC1:p21:1 Myc:p21:1 Caspase:p21:1"/>
+    </node>
+    <node id="RB1" maxvalue="1">
+      <parameter val="1"/>
+    </node>
+    <node id="Wip1" maxvalue="1">
+      <parameter val="1" idActiveInteractions="p53_A:Wip1:1"/>
+    </node>
+    <node id="HDAC1" maxvalue="1">
+      <parameter val="1"/>
+      <parameter val="1" idActiveInteractions="Sirt1:HDAC1:1"/>
+      <parameter val="1" idActiveInteractions="miR_34c:HDAC1:1"/>
+      <parameter val="1" idActiveInteractions="miR_34c:HDAC1:1 Sirt1:HDAC1:1"/>
+      <parameter val="1" idActiveInteractions="DNA_damage:HDAC1:1"/>
+    </node>
+    <node id="Myc" maxvalue="1">
+      <parameter val="1"/>
+      <parameter val="1" idActiveInteractions="p38MAPK:Myc:1"/>
+      <parameter val="1" idActiveInteractions="p38MAPK:Myc:1 miR_34c:Myc:1"/>
+    </node>
+    <node id="Sirt1" maxvalue="1">
+      <parameter val="1" idActiveInteractions="E2F1:Sirt1:1"/>
+      <parameter val="1" idActiveInteractions="E2F1:Sirt1:1 HDAC1:Sirt1:1"/>
+      <parameter val="1" idActiveInteractions="miR_34c:Sirt1:1 E2F1:Sirt1:1"/>
+    </node>
+    <node id="Cdc25" maxvalue="1">
+      <parameter val="1"/>
+      <parameter val="1" idActiveInteractions="Myc:Cdc25:1"/>
+      <parameter val="1" idActiveInteractions="miR_34c:Cdc25:1"/>
+      <parameter val="1" idActiveInteractions="miR_34c:Cdc25:1 Myc:Cdc25:1"/>
+      <parameter val="1" idActiveInteractions="p38MAPK:Cdc25:1 Myc:Cdc25:1"/>
+      <parameter val="1" idActiveInteractions="ATM:Cdc25:1"/>
+      <parameter val="1" idActiveInteractions="ATM:Cdc25:1 Myc:Cdc25:1"/>
+      <parameter val="1" idActiveInteractions="ATM:Cdc25:1 miR_34c:Cdc25:1"/>
+      <parameter val="1" idActiveInteractions="ATM:Cdc25:1 miR_34c:Cdc25:1 Myc:Cdc25:1"/>
+    </node>
+    <node id="CdkCyclinD" maxvalue="1">
+      <parameter val="1" idActiveInteractions="Cdc25:CdkCyclinD:1"/>
+      <parameter val="1" idActiveInteractions="p21:CdkCyclinD:1 Cdc25:CdkCyclinD:1"/>
+      <parameter val="1" idActiveInteractions="miR_34c:CdkCyclinD:1 Cdc25:CdkCyclinD:1"/>
+      <parameter val="1" idActiveInteractions="miR_34c:CdkCyclinD:1 p21:CdkCyclinD:1 Cdc25:CdkCyclinD:1"/>
+      <parameter val="1" idActiveInteractions="GAS5:CdkCyclinD:1 Cdc25:CdkCyclinD:1"/>
+      <parameter val="1" idActiveInteractions="GAS5:CdkCyclinD:1 p21:CdkCyclinD:1 Cdc25:CdkCyclinD:1"/>
+      <parameter val="1" idActiveInteractions="GAS5:CdkCyclinD:1 miR_34c:CdkCyclinD:1 Cdc25:CdkCyclinD:1"/>
+    </node>
+    <node id="CdkCyclinE" maxvalue="1">
+      <parameter val="1" idActiveInteractions="E2F1:CdkCyclinE:1"/>
+    </node>
+    <node id="Bcl2" maxvalue="1">
+      <parameter val="1" idActiveInteractions="Cdc25:Bcl2:1"/>
+    </node>
+    <node id="BAX" maxvalue="1">
+      <parameter val="1" idActiveInteractions="p53_K:BAX:1"/>
+    </node>
+    <node id="Caspase" maxvalue="1">
+      <parameter val="1"/>
+      <parameter val="1" idActiveInteractions="BAX:Caspase:1"/>
+      <parameter val="1" idActiveInteractions="Bcl2:Caspase:1 BAX:Caspase:1"/>
+      <parameter val="1" idActiveInteractions="p21:Caspase:1 BAX:Caspase:1"/>
+      <parameter val="1" idActiveInteractions="p21:Caspase:1 Bcl2:Caspase:1 BAX:Caspase:1"/>
+    </node>
+    <node id="PROLIFERATION" maxvalue="1">
+      <parameter val="1" idActiveInteractions="CdkCyclinE:PROLIFERATION:1"/>
+    </node>
+    <node id="CYCLE_ARREST" maxvalue="1">
+      <parameter val="1" idActiveInteractions="p21:CYCLE_ARREST:1"/>
+    </node>
+    <node id="APOPTOSIS" maxvalue="1">
+      <parameter val="1" idActiveInteractions="Caspase:APOPTOSIS:1"/>
+    </node>
+    <edge id="DNA_damage:DNA_damage:1" from="DNA_damage" to="DNA_damage" sign="positive" minvalue="1"/>
+    <edge id="DNA_damage:ATM:1" from="DNA_damage" to="ATM" sign="positive" minvalue="1"/>
+    <edge id="Wip1:ATM:1" from="Wip1" to="ATM" sign="negative" minvalue="1"/>
+    <edge id="HDAC1:ATM:1" from="HDAC1" to="ATM" sign="negative" minvalue="1"/>
+    <edge id="ATM:p38MAPK:1" from="ATM" to="p38MAPK" sign="positive" minvalue="1"/>
+    <edge id="DNA_damage:GAS5:1" from="DNA_damage" to="GAS5" sign="positive" minvalue="1"/>
+    <edge id="ATM:Mdm2:1" from="ATM" to="Mdm2" sign="negative" minvalue="1"/>
+    <edge id="p53:Mdm2:1" from="p53" to="Mdm2" sign="positive" minvalue="1"/>
+    <edge id="miR_34c:Mdm2:1" from="miR_34c" to="Mdm2" sign="negative" minvalue="1"/>
+    <edge id="RB1:Mdm2:1" from="RB1" to="Mdm2" sign="negative" minvalue="1"/>
+    <edge id="Wip1:Mdm2:1" from="Wip1" to="Mdm2" sign="negative" minvalue="1"/>
+    <edge id="ATM:p53:1" from="ATM" to="p53" sign="positive" minvalue="1"/>
+    <edge id="p38MAPK:p53:1" from="p38MAPK" to="p53" sign="positive" minvalue="1"/>
+    <edge id="GAS5:p53:1" from="GAS5" to="p53" sign="positive" minvalue="1"/>
+    <edge id="Mdm2:p53:1" from="Mdm2" to="p53" sign="negative" minvalue="1"/>
+    <edge id="p53:p53_A:1" from="p53" to="p53_A" sign="positive" minvalue="1"/>
+    <edge id="p53_K:p53_A:1" from="p53_K" to="p53_A" sign="negative" minvalue="1"/>
+    <edge id="p53INP1:p53_A:1" from="p53INP1" to="p53_A" sign="negative" minvalue="1"/>
+    <edge id="Sirt1:p53_A:1" from="Sirt1" to="p53_A" sign="negative" minvalue="1"/>
+    <edge id="p53:p53_K:1" from="p53" to="p53_K" sign="positive" minvalue="1"/>
+    <edge id="p53_A:p53_K:1" from="p53_A" to="p53_K" sign="negative" minvalue="1"/>
+    <edge id="Wip1:p53_K:1" from="Wip1" to="p53_K" sign="negative" minvalue="1"/>
+    <edge id="Sirt1:p53_K:1" from="Sirt1" to="p53_K" sign="negative" minvalue="1"/>
+    <edge id="p53_A:p53INP1:1" from="p53_A" to="p53INP1" sign="positive" minvalue="1"/>
+    <edge id="p53_K:p53INP1:1" from="p53_K" to="p53INP1" sign="positive" minvalue="1"/>
+    <edge id="ATM:miR_34c:1" from="ATM" to="miR_34c" sign="positive" minvalue="1"/>
+    <edge id="p38MAPK:miR_34c:1" from="p38MAPK" to="miR_34c" sign="positive" minvalue="1"/>
+    <edge id="E2F1:miR_34c:1" from="E2F1" to="miR_34c" sign="negative" minvalue="1"/>
+    <edge id="GAS5:E2F1:1" from="GAS5" to="E2F1" sign="negative" minvalue="1"/>
+    <edge id="RB1:E2F1:1" from="RB1" to="E2F1" sign="negative" minvalue="1"/>
+    <edge id="Cdc25:E2F1:1" from="Cdc25" to="E2F1" sign="positive" minvalue="1"/>
+    <edge id="p38MAPK:p21:1" from="p38MAPK" to="p21" sign="positive" minvalue="1"/>
+    <edge id="p53_A:p21:1" from="p53_A" to="p21" sign="positive" minvalue="1"/>
+    <edge id="HDAC1:p21:1" from="HDAC1" to="p21" sign="negative" minvalue="1"/>
+    <edge id="Myc:p21:1" from="Myc" to="p21" sign="negative" minvalue="1"/>
+    <edge id="Caspase:p21:1" from="Caspase" to="p21" sign="negative" minvalue="1"/>
+    <edge id="Sirt1:RB1:1" from="Sirt1" to="RB1" sign="negative" minvalue="1"/>
+    <edge id="Cdc25:RB1:1" from="Cdc25" to="RB1" sign="negative" minvalue="1"/>
+    <edge id="CdkCyclinD:RB1:1" from="CdkCyclinD" to="RB1" sign="negative" minvalue="1"/>
+    <edge id="CdkCyclinE:RB1:1" from="CdkCyclinE" to="RB1" sign="negative" minvalue="1"/>
+    <edge id="p53_A:Wip1:1" from="p53_A" to="Wip1" sign="positive" minvalue="1"/>
+    <edge id="DNA_damage:HDAC1:1" from="DNA_damage" to="HDAC1" sign="negative" minvalue="1"/>
+    <edge id="miR_34c:HDAC1:1" from="miR_34c" to="HDAC1" sign="negative" minvalue="1"/>
+    <edge id="Sirt1:HDAC1:1" from="Sirt1" to="HDAC1" sign="negative" minvalue="1"/>
+    <edge id="p38MAPK:Myc:1" from="p38MAPK" to="Myc" sign="positive" minvalue="1"/>
+    <edge id="miR_34c:Myc:1" from="miR_34c" to="Myc" sign="negative" minvalue="1"/>
+    <edge id="p21:Myc:1" from="p21" to="Myc" sign="negative" minvalue="1"/>
+    <edge id="RB1:Myc:1" from="RB1" to="Myc" sign="negative" minvalue="1"/>
+    <edge id="miR_34c:Sirt1:1" from="miR_34c" to="Sirt1" sign="negative" minvalue="1"/>
+    <edge id="E2F1:Sirt1:1" from="E2F1" to="Sirt1" sign="positive" minvalue="1"/>
+    <edge id="HDAC1:Sirt1:1" from="HDAC1" to="Sirt1" sign="negative" minvalue="1"/>
+    <edge id="ATM:Cdc25:1" from="ATM" to="Cdc25" sign="negative" minvalue="1"/>
+    <edge id="p38MAPK:Cdc25:1" from="p38MAPK" to="Cdc25" sign="negative" minvalue="1"/>
+    <edge id="miR_34c:Cdc25:1" from="miR_34c" to="Cdc25" sign="negative" minvalue="1"/>
+    <edge id="Myc:Cdc25:1" from="Myc" to="Cdc25" sign="positive" minvalue="1"/>
+    <edge id="GAS5:CdkCyclinD:1" from="GAS5" to="CdkCyclinD" sign="negative" minvalue="1"/>
+    <edge id="miR_34c:CdkCyclinD:1" from="miR_34c" to="CdkCyclinD" sign="negative" minvalue="1"/>
+    <edge id="p21:CdkCyclinD:1" from="p21" to="CdkCyclinD" sign="negative" minvalue="1"/>
+    <edge id="Cdc25:CdkCyclinD:1" from="Cdc25" to="CdkCyclinD" sign="positive" minvalue="1"/>
+    <edge id="miR_34c:CdkCyclinE:1" from="miR_34c" to="CdkCyclinE" sign="negative" minvalue="1"/>
+    <edge id="E2F1:CdkCyclinE:1" from="E2F1" to="CdkCyclinE" sign="positive" minvalue="1"/>
+    <edge id="p21:CdkCyclinE:1" from="p21" to="CdkCyclinE" sign="negative" minvalue="1"/>
+    <edge id="miR_34c:Bcl2:1" from="miR_34c" to="Bcl2" sign="negative" minvalue="1"/>
+    <edge id="Cdc25:Bcl2:1" from="Cdc25" to="Bcl2" sign="positive" minvalue="1"/>
+    <edge id="p53_K:BAX:1" from="p53_K" to="BAX" sign="positive" minvalue="1"/>
+    <edge id="Bcl2:BAX:1" from="Bcl2" to="BAX" sign="negative" minvalue="1"/>
+    <edge id="p21:Caspase:1" from="p21" to="Caspase" sign="negative" minvalue="1"/>
+    <edge id="Bcl2:Caspase:1" from="Bcl2" to="Caspase" sign="negative" minvalue="1"/>
+    <edge id="BAX:Caspase:1" from="BAX" to="Caspase" sign="positive" minvalue="1"/>
+    <edge id="CdkCyclinE:PROLIFERATION:1" from="CdkCyclinE" to="PROLIFERATION" sign="positive" minvalue="1"/>
+    <edge id="p21:CYCLE_ARREST:1" from="p21" to="CYCLE_ARREST" sign="positive" minvalue="1"/>
+    <edge id="Caspase:APOPTOSIS:1" from="Caspase" to="APOPTOSIS" sign="positive" minvalue="1"/>
+  </graph>
+</gxl>
